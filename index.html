@@ -2,13 +2,6 @@
 <html ng-app="userModule" xmlns="http://www.w3.org/1999/html">
 <head>
     <link rel="stylesheet" href="css/userAdmin.css" />
-    <script type="text/javascript" src="js/vendor/angular.min.js"></script>
-    <script type="text/javascript" src="js/vendor/underscore.js"></script>
-    <script type="text/javascript" src="js/modules/main.js"></script>
-    <script type="text/javascript" src="js/modules/user/controllers/UsersCtrl.js"></script>
-    <script type="text/javascript" src="js/modules/user/proxies/UsersProxy.js"></script>
-    <script type="text/javascript" src="js/modules/user/services/UserService.js"></script>
-    <script type="text/javascript" src="js/modules/user/models/User.js"></script>
 </head>
 <body>
     <div ng-controller="controllers.UsersCtrl">
@@ -28,4 +21,9 @@
         <label>Users Amount: {{users.length}}</label></br>
         <button ng-click="deleteSelectedUser()">Delete Selected User</button>
     </div>
+
+
+
 </body>
+<script data-main="js/bootstrap" src="js/require.js" ></script>
+</html>
