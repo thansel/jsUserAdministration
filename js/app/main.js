@@ -1,18 +1,19 @@
 define([
-    'underscore'
-    , 'angular'
-    , 'usersCtrl'
-    , 'userService'
-    , 'usersProxy'
-    , 'user'],
+    'jquery'
+    , 'underscore'
+    , 'angular.min'
+    , 'modules/user/controllers/usersCtrl'
+    , 'modules/user/services/userService'
+    , 'modules/user/proxies/usersProxy'
+    , 'modules/user/models/user'],
 
     function MainApplication() {
         var initialize = function () {
 
             // declare the User-Model
             var userModule = angular.module(
-                'userModule',   // unique model-name
-                []              // dependencies on other modules
+                'userModule', // unique model-name
+                [] // dependencies on other modules
             );
 
             userModule.value(

@@ -4,26 +4,26 @@
     <link rel="stylesheet" href="css/userAdmin.css" />
 </head>
 <body>
-    <div ng-controller="controllers.UsersCtrl">
-        <form>
-            <input placeholder="First Name" type="text" ng-model="firstName" ng-model-instant>
-            <input placeholder="Last Name" type="text" ng-model="lastName" ng-model-instant>
-            <input placeholder="Age" type="text" ng-model="age" ng-model-instant>
-            <button ng-click="addUser()">Add New User</button>
-        </form>
+<div ng-controller="controllers.UsersCtrl">
+    <form>
+        <input placeholder="First Name" type="text" ng-model="firstName" ng-model-instant>
+        <input placeholder="Last Name" type="text" ng-model="lastName" ng-model-instant>
+        <input placeholder="Age" type="text" ng-model="age" ng-model-instant>
+        <button ng-click="addUser()">Add New User</button>
+    </form>
 
-        <ul>
-            <li style="color:#000000;" ng-repeat="user in users">
-                <input type="checkbox" ng-model="user.deleted">
-                <span class="deleted-{{user.deleted}}">{{user.firstName}}, {{user.lastName}}, {{user.age}}</span>
-            </li>
-        </ul>
-        <label>Users Amount: {{users.length}}</label></br>
-        <button ng-click="deleteSelectedUser()">Delete Selected User</button>
-    </div>
+    <ul>
+        <li style="color:#000000;" ng-repeat="user in users">
+            <input type="checkbox" ng-model="user.deleted">
+            <span class="deleted-{{user.deleted}}">{{user.firstName}}, {{user.lastName}}, {{user.age}}</span>
+        </li>
+    </ul>
+    <label>Users Amount: {{users.length}}</label></br>
+    <button ng-click="deleteSelectedUser()">Delete Selected User</button>
+</div>
 
 
 
 </body>
-<script data-main="js/bootstrap" src="js/require.js" ></script>
+<script data-main="js/bootstrap" src="js/libs/require.js" ></script>
 </html>
